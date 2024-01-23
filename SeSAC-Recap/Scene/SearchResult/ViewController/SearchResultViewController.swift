@@ -80,9 +80,10 @@ extension SearchResultViewController: UICollectionViewDataSource, UICollectionVi
 	}
 
 	func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-		for item in indexPaths where item.row == items.count - 3 {
+		for item in indexPaths where item.row >= items.count - 3 {
 			page += 1
 			callSearchResult(searchText, SearchSortKind.allCases[selected], withStart: start)
+			break
 		}
 	}
 
