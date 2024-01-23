@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Result View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SearchResultViewController" id="Y6W-OH-hqX" customClass="SearchResultViewController" customModule="SeSAC_Recap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLe-k8-01U">
+                                <rect key="frame" x="20" y="59" width="4" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLO-1X-4Ow">
+                                <rect key="frame" x="16" y="82" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="tapFilterButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YaE-9F-b2H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVu-hJ-aZH">
+                                <rect key="frame" x="186" y="82" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="tapFilterButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wrR-Rh-m5k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkV-mk-R0I">
+                                <rect key="frame" x="271" y="82" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="tapFilterButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4oF-Mp-8Kc"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YIH-4M-2x3">
+                                <rect key="frame" x="0.0" y="122" width="393" height="696"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YsT-wV-AGo">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tz9-mO-jrh">
+                                <rect key="frame" x="101" y="82" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="tapFilterButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kAU-c6-38I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="YIH-4M-2x3" secondAttribute="bottom" id="3ft-oM-5e3"/>
+                            <constraint firstItem="bLe-k8-01U" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="AHe-gQ-fpf"/>
+                            <constraint firstItem="bLe-k8-01U" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Adi-A0-imA"/>
+                            <constraint firstItem="rLO-1X-4Ow" firstAttribute="top" secondItem="bLe-k8-01U" secondAttribute="bottom" constant="5" id="MUr-OW-iUf"/>
+                            <constraint firstItem="rkV-mk-R0I" firstAttribute="leading" secondItem="bVu-hJ-aZH" secondAttribute="trailing" constant="10" id="Qjv-gA-lbD"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YIH-4M-2x3" secondAttribute="trailing" id="c9t-eA-juU"/>
+                            <constraint firstItem="tz9-mO-jrh" firstAttribute="top" secondItem="rLO-1X-4Ow" secondAttribute="top" id="cpv-8r-dHv"/>
+                            <constraint firstItem="rkV-mk-R0I" firstAttribute="top" secondItem="bVu-hJ-aZH" secondAttribute="top" id="ea2-f6-aYt"/>
+                            <constraint firstItem="tz9-mO-jrh" firstAttribute="leading" secondItem="rLO-1X-4Ow" secondAttribute="trailing" constant="10" id="gkQ-QV-8aV"/>
+                            <constraint firstItem="bVu-hJ-aZH" firstAttribute="top" secondItem="tz9-mO-jrh" secondAttribute="top" id="n8P-eE-vqY"/>
+                            <constraint firstItem="YIH-4M-2x3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="pCt-Y3-Pyb"/>
+                            <constraint firstItem="bVu-hJ-aZH" firstAttribute="leading" secondItem="tz9-mO-jrh" secondAttribute="trailing" constant="10" id="xYn-y6-uIA"/>
+                            <constraint firstItem="rLO-1X-4Ow" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="yGg-gf-nSg"/>
+                            <constraint firstItem="YIH-4M-2x3" firstAttribute="top" secondItem="rLO-1X-4Ow" secondAttribute="bottom" constant="5" id="zbV-xV-JED"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="YIH-4M-2x3" id="8kJ-Qz-pkh"/>
+                        <outlet property="resultCountLabel" destination="bLe-k8-01U" id="ShB-zO-PAS"/>
+                        <outletCollection property="filterButtons" destination="rLO-1X-4Ow" collectionClass="NSMutableArray" id="lBQ-qk-YSP"/>
+                        <outletCollection property="filterButtons" destination="tz9-mO-jrh" collectionClass="NSMutableArray" id="exj-M9-0Tc"/>
+                        <outletCollection property="filterButtons" destination="bVu-hJ-aZH" collectionClass="NSMutableArray" id="MVr-3f-agP"/>
+                        <outletCollection property="filterButtons" destination="rkV-mk-R0I" collectionClass="NSMutableArray" id="pmP-I9-S6s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="123" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

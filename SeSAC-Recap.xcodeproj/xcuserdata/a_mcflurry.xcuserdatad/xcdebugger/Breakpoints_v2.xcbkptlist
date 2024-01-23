@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "CA158289-7E15-4812-BBF3-890A44428367"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "44F30478-B3C7-4040-B56F-5B540D1F583E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeSAC-Recap/Scene/Main/ViewController/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "isAppearEmptyView()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "44F30478-B3C7-4040-B56F-5B540D1F583E - 42980757c0a1ae1c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSAC_Recap.MainViewController.isAppearEmptyView() -&gt; ()"
+                  moduleName = "SeSAC-Recap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a_mcflurry/Documents/Xcode/SeSAC-iOS/ignore/SeSAC-Recap/SeSAC-Recap/Scene/Main/ViewController/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "412">
+               </Location>
+               <Location
+                  uuid = "44F30478-B3C7-4040-B56F-5B540D1F583E - 42980757c0a1ae1c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSAC_Recap.MainViewController.isAppearEmptyView() -&gt; ()"
+                  moduleName = "SeSAC-Recap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a_mcflurry/Documents/Xcode/SeSAC-iOS/ignore/SeSAC-Recap/SeSAC-Recap/Scene/Main/ViewController/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "384">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB60EE5A-3789-40DA-848A-365B3CAC7612"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeSAC-Recap/Scene/Main/ViewController/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "isAppearEmptyView()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BB60EE5A-3789-40DA-848A-365B3CAC7612 - 42980757c0a1aefb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSAC_Recap.MainViewController.isAppearEmptyView() -&gt; ()"
+                  moduleName = "SeSAC-Recap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a_mcflurry/Documents/Xcode/SeSAC-iOS/ignore/SeSAC-Recap/SeSAC-Recap/Scene/Main/ViewController/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "464">
+               </Location>
+               <Location
+                  uuid = "BB60EE5A-3789-40DA-848A-365B3CAC7612 - 42980757c0a1aefb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSAC_Recap.MainViewController.isAppearEmptyView() -&gt; ()"
+                  moduleName = "SeSAC-Recap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a_mcflurry/Documents/Xcode/SeSAC-iOS/ignore/SeSAC-Recap/SeSAC-Recap/Scene/Main/ViewController/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "412">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "70B101A4-93F7-4FFE-B61A-8C5493C5FA4E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeSAC-Recap/Scene/Main/ViewController/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "isAppearEmptyView()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "70B101A4-93F7-4FFE-B61A-8C5493C5FA4E - 42980757c0a1aeda"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSAC_Recap.MainViewController.isAppearEmptyView() -&gt; ()"
+                  moduleName = "SeSAC-Recap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a_mcflurry/Documents/Xcode/SeSAC-iOS/ignore/SeSAC-Recap/SeSAC-Recap/Scene/Main/ViewController/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "500">
+               </Location>
+               <Location
+                  uuid = "70B101A4-93F7-4FFE-B61A-8C5493C5FA4E - 42980757c0a1aeda"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSAC_Recap.MainViewController.isAppearEmptyView() -&gt; ()"
+                  moduleName = "SeSAC-Recap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a_mcflurry/Documents/Xcode/SeSAC-iOS/ignore/SeSAC-Recap/SeSAC-Recap/Scene/Main/ViewController/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "464">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3503617B-99B2-42F8-A3EA-828A0DD9172D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeSAC-Recap/Scene/Main/ViewController/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "isAppearEmptyView()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3503617B-99B2-42F8-A3EA-828A0DD9172D - 42980757c0a1ae98"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSAC_Recap.MainViewController.isAppearEmptyView() -&gt; ()"
+                  moduleName = "SeSAC-Recap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a_mcflurry/Documents/Xcode/SeSAC-iOS/ignore/SeSAC-Recap/SeSAC-Recap/Scene/Main/ViewController/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "520">
+               </Location>
+               <Location
+                  uuid = "3503617B-99B2-42F8-A3EA-828A0DD9172D - 42980757c0a1aeb9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSAC_Recap.MainViewController.isAppearEmptyView() -&gt; ()"
+                  moduleName = "SeSAC-Recap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a_mcflurry/Documents/Xcode/SeSAC-iOS/ignore/SeSAC-Recap/SeSAC-Recap/Scene/Main/ViewController/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "500">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B0C1919-D2D0-47D4-B26B-CFD0CEE004E5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeSAC-Recap/Scene/Main/ViewController/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "isAppearEmptyView()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0B0C1919-D2D0-47D4-B26B-CFD0CEE004E5 - 42980757c0a1ac4f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSAC_Recap.MainViewController.isAppearEmptyView() -&gt; ()"
+                  moduleName = "SeSAC-Recap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a_mcflurry/Documents/Xcode/SeSAC-iOS/ignore/SeSAC-Recap/SeSAC-Recap/Scene/Main/ViewController/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "2028">
+               </Location>
+               <Location
+                  uuid = "0B0C1919-D2D0-47D4-B26B-CFD0CEE004E5 - 42980757c0a1ac4f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSAC_Recap.MainViewController.isAppearEmptyView() -&gt; ()"
+                  moduleName = "SeSAC-Recap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a_mcflurry/Documents/Xcode/SeSAC-iOS/ignore/SeSAC-Recap/SeSAC-Recap/Scene/Main/ViewController/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "1832">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "325DE588-10DE-4A14-A0C2-969E66CA86A0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeSAC-Recap/Scene/Main/ViewController/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "isAppearEmptyView()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "325DE588-10DE-4A14-A0C2-969E66CA86A0 - 42980757c0a1adf3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSAC_Recap.MainViewController.isAppearEmptyView() -&gt; ()"
+                  moduleName = "SeSAC-Recap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a_mcflurry/Documents/Xcode/SeSAC-iOS/ignore/SeSAC-Recap/SeSAC-Recap/Scene/Main/ViewController/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "1184">
+               </Location>
+               <Location
+                  uuid = "325DE588-10DE-4A14-A0C2-969E66CA86A0 - 42980757c0a1ad14"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSAC_Recap.MainViewController.isAppearEmptyView() -&gt; ()"
+                  moduleName = "SeSAC-Recap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a_mcflurry/Documents/Xcode/SeSAC-iOS/ignore/SeSAC-Recap/SeSAC-Recap/Scene/Main/ViewController/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "960">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
