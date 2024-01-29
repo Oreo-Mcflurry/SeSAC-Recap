@@ -8,20 +8,42 @@
 import UIKit
 
 extension UserDefaults {
-	enum UserDefaultsKeys: String, CaseIterable {
+	enum BoolUserDefaultsKeys: String, CaseIterable {
 		case isFirstStart
-		case userProfile
-		case userNickname
+	}
+
+	enum StringArrayUserDefaultsKeys: String, CaseIterable {
 		case searchHistory
 		case likeList
+	}
+
+	enum StringUserDefaultsKeys: String, CaseIterable {
+		case userProfile
+		case userNickname
 	}
 
 	// 서브스크립트와 제네릭을 섞어서 간단하게 UserDefaults를 쓸 수 있게 구상해보았습니다.
 	// +) 근데 어째 이게 더 힘든거같아요 ㅋㅋㅋ 차라리 여러개 만들어서 타입캐스팅을 강제로 할수 있게 할걸 그랬나.. 싶기도 하구요
 	// ++) 시도해봤는데 잘 안됩니다..
-	subscript<T>(item: UserDefaultsKeys) -> T? {
+	subscript(item: BoolUserDefaultsKeys) -> Bool {
 		get {
-			return UserDefaults.standard.value(forKey: item.rawValue) as? T
+			return UserDefaults.standard.bool(forKey: item.rawValue)
+		} set {
+			UserDefaults.standard.setValue(newValue, forKey: item.rawValue)
+		}
+	}
+
+	subscript(item: StringUserDefaultsKeys) -> String {
+		get {
+			return UserDefaults.standard.string(forKey: item.rawValue) ?? ""
+		} set {
+			UserDefaults.standard.setValue(newValue, forKey: item.rawValue)
+		}
+	}
+
+	subscript(item: StringArrayUserDefaultsKeys) -> [String] {
+		get {
+			return UserDefaults.standard.array(forKey: item.rawValue)! as! [String]
 		} set {
 			UserDefaults.standard.setValue(newValue, forKey: item.rawValue)
 		}
@@ -53,44 +75,44 @@ extension UserDefaults {
 //	}
 
 	static func resetUserDefaults() {
-		for item in UserDefaultsKeys.allCases {
+		for item in BoolUserDefaultsKeys.allCases {
 			UserDefaults.standard.removeObject(forKey: item.rawValue)
 		}
 	}
 
 	static func resetSearchHistory() {
-		UserDefaults.standard.removeObject(forKey: UserDefaultsKeys.searchHistory.rawValue)
+		UserDefaults.standard.removeObject(forKey: StringArrayUserDefaultsKeys.searchHistory.rawValue)
 	}
 
 	static func deleteSearchHistroy(_ index: Int) {
-		if var data: [String] = UserDefaults.standard[.searchHistory] {
+		var data = UserDefaults.standard[.searchHistory]
 			data.remove(at: index)
 			UserDefaults.standard[.searchHistory] = data
-		}
+
 	}
 
 	static func isStuffInList(_ id: String) -> String {
-		if let lists: [String] = UserDefaults.standard[.likeList] {
-			for list in lists where list == id {
-				return "heart.fill"
-			}
+		let lists: [String] = UserDefaults.standard[.likeList]
+		for list in lists where list == id {
+			return "heart.fill"
 		}
-//		if let list: [String] = UserDefaults.standard[.likeList] {
-//			
-//		}
+
+		//		if let list: [String] = UserDefaults.standard[.likeList] {
+		//
+		//		}
 		return "heart"
 	}
 
 	static func likeToggle(_ id: String) {
-		if var lists: [String] = UserDefaults.standard[.likeList] {
-			for list in lists where id == list {
-				UserDefaults.standard[.likeList]	= lists.filter( { $0 != id })
-				return
-			}
-			lists.insert(id,at:0)
-			UserDefaults.standard[.likeList] = lists
+		var lists: [String] = UserDefaults.standard[.likeList]
+		for list in lists where id == list {
+			UserDefaults.standard[.likeList]	= lists.filter( { $0 != id })
 			return
 		}
+		lists.insert(id,at:0)
+		UserDefaults.standard[.likeList] = lists
+		return
+
 		UserDefaults.standard[.likeList] = ["\(id)"]
 	}
 }

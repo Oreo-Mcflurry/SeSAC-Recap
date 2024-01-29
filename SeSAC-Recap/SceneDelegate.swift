@@ -16,11 +16,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		// Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
 		// If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
 		// This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-		guard let _ = (scene as? UIWindowScene) else { return }
-
 		guard let scene = (scene as? UIWindowScene) else { return }
 
-		if let _: Bool = UserDefaults.standard[.isFirstStart] {
+		let isFirstRun = UserDefaults.standard[.isFirstStart]
+
+		if isFirstRun {
 			window = UIWindow(windowScene: scene)
 			let sb = UIStoryboard(name: "Main", bundle: nil)
 			let vc = sb.instantiateViewController(identifier: "tabView") as! TabViewController
@@ -31,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 			content.title = "하핫 노티는 즐거워"
 			content.body = "코딩은 즐거워 ?? \"아닌듯함\""
 			content.badge = 20
-
+			
 			let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
 
 			let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)

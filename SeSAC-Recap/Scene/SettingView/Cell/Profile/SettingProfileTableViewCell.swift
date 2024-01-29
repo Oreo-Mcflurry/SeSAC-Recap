@@ -28,16 +28,15 @@ class SettingProfileTableViewCell: UITableViewCell {
 	}
 
 	func setCell() {
-		if let userName: String = UserDefaults.standard[.userNickname] {
-			nickNameLabel.text = userName
-		}
+		nickNameLabel.text = UserDefaults.standard[.userNickname]
 
-		if let image: String = UserDefaults.standard[.userProfile] {
-			profileImage.image = UIImage(named: image)
-		}
 
-		if let lists: [String] = UserDefaults.standard[.likeList] {
-//			descriptionLabel.text = "\(lists.count)개의 상품을 좋아하고 있어요!"
+		profileImage.image = UIImage(named: UserDefaults.standard[.userProfile])
+		
+
+		let lists: [String] = UserDefaults.standard[.likeList]
+		if !lists.isEmpty {
+			//			descriptionLabel.text = "\(lists.count)개의 상품을 좋아하고 있어요!"
 			let attributedString = NSMutableAttributedString(string: "\(lists.count)개의 상품을 좋아하고 있어요!")
 
 			// Set the color attribute for the count value

@@ -43,7 +43,9 @@ class ProfileSettingViewController: UIViewController {
 	@IBAction func tapCompleteButton(_ sender: UIButton) {
 		UserDefaults.standard[.userNickname] = enterNicknameTextField.text!
 		UserDefaults.standard[.userProfile] = currentUserProfile.rawValue
-		if let _: Bool = UserDefaults.standard[.isFirstStart] {
+		let isFirstRun = UserDefaults.standard[.isFirstStart]
+
+		if isFirstRun {
 			navigationController?.popViewController(animated: true)
 		} else {
 			UserDefaults.standard[.isFirstStart] = true
@@ -97,22 +99,22 @@ class ProfileSettingViewController: UIViewController {
 // 잘 몰랐던 문법들을 최대한 많이 써보려고 합니다. 서브스크립트, 제네릭, where절 같은 애들.
 extension ProfileSettingViewController: ConfigureProtocol {
 	func configureView() {
-		if let nickName: String = UserDefaults.standard[.userNickname] { enterNicknameTextField.text! = nickName }
-		if let profile: String = UserDefaults.standard[.userProfile] {
-			for item in Profile.allCases where item.rawValue == profile { self.currentUserProfile = item }
-		}
+		enterNicknameTextField.text! = UserDefaults.standard[.userNickname]
+		let profile: String = UserDefaults.standard[.userProfile]
+		for item in Profile.allCases where item.rawValue == profile { self.currentUserProfile = item }
+
 		profileView.profilleImageView.image = UIImage(named: currentUserProfile.rawValue)
 		navigationItem.title = "프로필 설정"
 
-//		profileImage.layer.cornerRadius = profileImage.frame.width / 2
-//		profileImage.isUserInteractionEnabled = true
+		//		profileImage.layer.cornerRadius = profileImage.frame.width / 2
+		//		profileImage.isUserInteractionEnabled = true
 
-//		cameraImage.image = .camera
-//		cameraImage.isUserInteractionEnabled = true
+		//		cameraImage.image = .camera
+		//		cameraImage.isUserInteractionEnabled = true
 
-//		imageBackView.layer.cornerRadius = imageBackView.frame.width / 2
-//		imageBackView.backgroundColor = UIColor(resource: .main)
-		
+		//		imageBackView.layer.cornerRadius = imageBackView.frame.width / 2
+		//		imageBackView.backgroundColor = UIColor(resource: .main)
+
 		completeButton.layer.cornerRadius = 10
 		completeButton.backgroundColor = UIColor(resource: .main)
 		completeButton.titleLabel?.textColor = UIColor(resource: .text)
