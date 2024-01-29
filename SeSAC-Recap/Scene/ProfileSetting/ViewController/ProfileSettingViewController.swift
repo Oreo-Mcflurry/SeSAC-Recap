@@ -12,7 +12,10 @@ class ProfileSettingViewController: UIViewController {
 //	@IBOutlet weak var profileImage: UIImageView!
 //	@IBOutlet weak var imageBackView: UIView!
 
-	let profileImage = ProfileView()
+//	let profileImage = ProfileView()
+	@IBOutlet weak var profileView: ProfileView!
+	
+
 //	@IBOutlet weak var cameraImage: UIImageView!
 	@IBOutlet weak var enterNicknameTextField: UITextField!
 	@IBOutlet weak var statusLabel: UILabel!
@@ -20,7 +23,7 @@ class ProfileSettingViewController: UIViewController {
 
 	var currentUserProfile: Profile = Profile.allCases.randomElement()! {
 		didSet {
-			profileImage.profilleImageView.image = UIImage(named: self.currentUserProfile.rawValue)
+			profileView.profilleImageView.image = UIImage(named: self.currentUserProfile.rawValue)
 		}
 	}
 
@@ -98,7 +101,7 @@ extension ProfileSettingViewController: ConfigureProtocol {
 		if let profile: String = UserDefaults.standard[.userProfile] {
 			for item in Profile.allCases where item.rawValue == profile { self.currentUserProfile = item }
 		}
-		profileImage.profilleImageView.image = UIImage(named: currentUserProfile.rawValue)
+		profileView.profilleImageView.image = UIImage(named: currentUserProfile.rawValue)
 		navigationItem.title = "프로필 설정"
 
 //		profileImage.layer.cornerRadius = profileImage.frame.width / 2

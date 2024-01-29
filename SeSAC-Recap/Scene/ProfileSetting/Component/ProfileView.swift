@@ -26,7 +26,14 @@ class ProfileView: UIView, ConfigureView {
 	}
 
 	required init?(coder: NSCoder) {
-		fatalError()
+		super.init(coder: coder)
+		profilleImageView.isUserInteractionEnabled = true
+		profilleImageView.layer.cornerRadius = profilleImageView.frame.width / 2
+
+		imageBackView.layer.cornerRadius = imageBackView.frame.width / 2
+
+		cameraView.image = .camera
+		cameraView.isUserInteractionEnabled = true
 	}
 
 	func configureHierarchy() {
