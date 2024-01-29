@@ -60,6 +60,7 @@
 		0BD1A7AD2B67CC5200A750B1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0BD1A7AC2B67CC5200A750B1 /* SnapKit */; };
 		0BD1A7AF2B67CC5200A750B1 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0BD1A7AE2B67CC5200A750B1 /* SnapKit-Dynamic */; };
 		0BD1A7B12B67D3F200A750B1 /* CodebaseConfigureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1A7B02B67D3F200A750B1 /* CodebaseConfigureProtocol.swift */; };
+		0BD1A7B42B67E2A400A750B1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1A7B32B67E2A400A750B1 /* ProfileView.swift */; };
 		0BFC1D0E2B5971DA00C30162 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFC1D0C2B5971DA00C30162 /* ProfileCollectionViewCell.swift */; };
 		0BFC1D0F2B5971DA00C30162 /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFC1D0D2B5971DA00C30162 /* ProfileCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -115,6 +116,7 @@
 		0BCF81CC2B597030001F4E57 /* SelectProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		0BCF81CD2B597030001F4E57 /* SelectProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 		0BD1A7B02B67D3F200A750B1 /* CodebaseConfigureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodebaseConfigureProtocol.swift; sourceTree = "<group>"; };
+		0BD1A7B32B67E2A400A750B1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0BFC1D0C2B5971DA00C30162 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		0BFC1D0D2B5971DA00C30162 /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -437,6 +439,7 @@
 		0BCF81B72B595859001F4E57 /* ProfileSetting */ = {
 			isa = PBXGroup;
 			children = (
+				0BD1A7B22B67E28400A750B1 /* Component */,
 				0BCF81C52B596FF1001F4E57 /* Cell */,
 				0BCF81C02B596650001F4E57 /* Resource */,
 				0BCF81B92B595860001F4E57 /* ViewController */,
@@ -495,6 +498,14 @@
 				0BFC1D0D2B5971DA00C30162 /* ProfileCollectionViewCell.xib */,
 			);
 			path = Default;
+			sourceTree = "<group>";
+		};
+		0BD1A7B22B67E28400A750B1 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				0BD1A7B32B67E2A400A750B1 /* ProfileView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -621,6 +632,7 @@
 				0B6F63D42B5D347F00592F50 /* SettingViewController.swift in Sources */,
 				0B6F63952B5AC58C00592F50 /* MainViewController.swift in Sources */,
 				0BCF81B42B595732001F4E57 /* ConfigureProtocol.swift in Sources */,
+				0BD1A7B42B67E2A400A750B1 /* ProfileView.swift in Sources */,
 				0B6F63BF2B5BE30300592F50 /* SearchResltCollectionViewCell.swift in Sources */,
 				0BFC1D0E2B5971DA00C30162 /* ProfileCollectionViewCell.swift in Sources */,
 				0B6F63D82B5D39CB00592F50 /* SettingProfileTableViewCell.swift in Sources */,

@@ -17,41 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6K-3Q-oXe">
-                                <rect key="frame" x="146.66666666666666" y="79" width="100" height="100"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lWc-Da-Vg2">
-                                        <rect key="frame" x="5" y="5" width="90" height="90"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="e9f-aB-R7b" appends="YES" id="7AG-sE-cwT"/>
-                                        </connections>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lpt-Lm-q08">
-                                        <rect key="frame" x="65" y="65" width="30" height="30"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="9OL-Ce-k1d"/>
-                                            <constraint firstAttribute="width" constant="30" id="M1Q-bx-A25"/>
-                                        </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="VNA-hd-Bbq" appends="YES" id="bV9-6Q-c9b"/>
-                                        </connections>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="lWc-Da-Vg2" secondAttribute="bottom" constant="5" id="0G4-fB-L1H"/>
-                                    <constraint firstAttribute="height" constant="100" id="CoN-b9-LTg"/>
-                                    <constraint firstItem="Lpt-Lm-q08" firstAttribute="trailing" secondItem="lWc-Da-Vg2" secondAttribute="trailing" id="HL2-7t-5qq"/>
-                                    <constraint firstItem="lWc-Da-Vg2" firstAttribute="top" secondItem="T6K-3Q-oXe" secondAttribute="top" constant="5" id="ItD-FH-7tm"/>
-                                    <constraint firstAttribute="trailing" secondItem="lWc-Da-Vg2" secondAttribute="trailing" constant="5" id="K1y-En-Vm1"/>
-                                    <constraint firstItem="lWc-Da-Vg2" firstAttribute="leading" secondItem="T6K-3Q-oXe" secondAttribute="leading" constant="5" id="cFS-Sk-sgw"/>
-                                    <constraint firstAttribute="width" constant="100" id="ghG-2A-7ES"/>
-                                    <constraint firstItem="Lpt-Lm-q08" firstAttribute="bottom" secondItem="lWc-Da-Vg2" secondAttribute="bottom" id="iyS-V3-QyQ"/>
-                                </constraints>
-                            </view>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="닉네임을 입력해주세요 :)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qdy-hw-m6H" customClass="HoshiTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="닉네임을 입력해주세요 :)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qdy-hw-m6H" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="16" y="199" width="361" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="YMX-fZ-u8A"/>
@@ -83,13 +49,13 @@
                                     <action selector="nickNameEditing:" destination="Y6W-OH-hqX" eventType="editingChanged" id="CL4-HH-vId"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulW-GF-v4X">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulW-GF-v4X">
                                 <rect key="frame" x="16.000000000000004" y="259" width="41.333333333333343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZt-gb-RTv">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZt-gb-RTv">
                                 <rect key="frame" x="16" y="320" width="361" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="OGB-tE-VSh"/>
@@ -105,14 +71,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Qdy-hw-m6H" firstAttribute="top" secondItem="T6K-3Q-oXe" secondAttribute="bottom" constant="20" id="Hfx-A6-8vU"/>
-                            <constraint firstItem="T6K-3Q-oXe" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="UHs-NH-IEP"/>
                             <constraint firstItem="Qdy-hw-m6H" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Urz-tr-cSW"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ulW-GF-v4X" secondAttribute="trailing" constant="16" id="bcU-QO-i1C"/>
                             <constraint firstItem="PZt-gb-RTv" firstAttribute="top" secondItem="ulW-GF-v4X" secondAttribute="bottom" constant="40" id="ehd-9S-US4"/>
                             <constraint firstItem="ulW-GF-v4X" firstAttribute="top" secondItem="Qdy-hw-m6H" secondAttribute="bottom" constant="10" id="fLN-cT-cTZ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PZt-gb-RTv" secondAttribute="trailing" constant="16" id="mWJ-IG-hjC"/>
-                            <constraint firstItem="T6K-3Q-oXe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="naW-nq-4LQ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Qdy-hw-m6H" secondAttribute="trailing" constant="16" id="p4V-Nz-TcE"/>
                             <constraint firstItem="ulW-GF-v4X" firstAttribute="leading" secondItem="Qdy-hw-m6H" secondAttribute="leading" id="su1-d8-V4z"/>
                             <constraint firstItem="PZt-gb-RTv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="vr4-aE-E61"/>
@@ -122,11 +85,8 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="cameraImage" destination="Lpt-Lm-q08" id="0rK-U7-UAb"/>
                         <outlet property="completeButton" destination="PZt-gb-RTv" id="Mly-aV-dIV"/>
                         <outlet property="enterNicknameTextField" destination="Qdy-hw-m6H" id="qgt-Iw-71w"/>
-                        <outlet property="imageBackView" destination="T6K-3Q-oXe" id="108-zS-dJg"/>
-                        <outlet property="profileImage" destination="lWc-Da-Vg2" id="JOU-n8-smm"/>
                         <outlet property="statusLabel" destination="ulW-GF-v4X" id="JaK-zx-6EI"/>
                     </connections>
                 </viewController>
@@ -208,6 +168,11 @@
             <point key="canvasLocation" x="1100" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Qdy-hw-m6H">
+            <size key="intrinsicContentSize" width="166" height="34"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

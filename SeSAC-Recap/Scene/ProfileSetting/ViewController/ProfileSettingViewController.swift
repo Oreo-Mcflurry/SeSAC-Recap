@@ -9,16 +9,18 @@ import UIKit
 
 class ProfileSettingViewController: UIViewController {
 
-	@IBOutlet weak var profileImage: UIImageView!
-	@IBOutlet weak var imageBackView: UIView!
-	@IBOutlet weak var cameraImage: UIImageView!
+//	@IBOutlet weak var profileImage: UIImageView!
+//	@IBOutlet weak var imageBackView: UIView!
+
+	let profileImage = ProfileView()
+//	@IBOutlet weak var cameraImage: UIImageView!
 	@IBOutlet weak var enterNicknameTextField: UITextField!
 	@IBOutlet weak var statusLabel: UILabel!
 	@IBOutlet weak var completeButton: UIButton!
 
 	var currentUserProfile: Profile = Profile.allCases.randomElement()! {
 		didSet {
-			profileImage.image = UIImage(named: self.currentUserProfile.rawValue)
+			profileImage.profilleImageView.image = UIImage(named: self.currentUserProfile.rawValue)
 		}
 	}
 
@@ -96,16 +98,17 @@ extension ProfileSettingViewController: ConfigureProtocol {
 		if let profile: String = UserDefaults.standard[.userProfile] {
 			for item in Profile.allCases where item.rawValue == profile { self.currentUserProfile = item }
 		}
-		profileImage.image = UIImage(named: currentUserProfile.rawValue)
+		profileImage.profilleImageView.image = UIImage(named: currentUserProfile.rawValue)
 		navigationItem.title = "프로필 설정"
-		profileImage.layer.cornerRadius = profileImage.frame.width / 2
-		profileImage.isUserInteractionEnabled = true
 
-		cameraImage.image = .camera
-		cameraImage.isUserInteractionEnabled = true
+//		profileImage.layer.cornerRadius = profileImage.frame.width / 2
+//		profileImage.isUserInteractionEnabled = true
 
-		imageBackView.layer.cornerRadius = imageBackView.frame.width / 2
-		imageBackView.backgroundColor = UIColor(resource: .main)
+//		cameraImage.image = .camera
+//		cameraImage.isUserInteractionEnabled = true
+
+//		imageBackView.layer.cornerRadius = imageBackView.frame.width / 2
+//		imageBackView.backgroundColor = UIColor(resource: .main)
 		
 		completeButton.layer.cornerRadius = 10
 		completeButton.backgroundColor = UIColor(resource: .main)
