@@ -35,7 +35,8 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UISearchBarDelegate {
 	func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-		if var searchHistory: [String] = UserDefaults.standard[.searchHistory] {
+		var searchHistory: [String] = UserDefaults.standard[.searchHistory]
+		if !searchHistory.isEmpty {
 			if !searchHistory.contains(searchBar.text!) {
 				searchHistory.insert(searchBar.text!, at: 0)
 				UserDefaults.standard[.searchHistory] = searchHistory
@@ -75,7 +76,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		if let data: [String] = UserDefaults.standard[.searchHistory] {
+		let data: [String] = UserDefaults.standard[.searchHistory]
+		if !data.isEmpty{
 			return data.count == 0 ? 0 : data.count + 1
 		} else {
 			return 0
@@ -84,9 +86,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		if indexPath.row == 0 { tableView.reloadRows(at: [indexPath], with: .automatic); return }
-		if let searchHistory: [String] = UserDefaults.standard[.searchHistory] {
-			searchBar.text = searchHistory[indexPath.row-1]
-		}
+		let searchHistory: [String] = UserDefaults.standard[.searchHistory]
+		searchBar.text = searchHistory[indexPath.row-1]
+
 		navigateResultView()
 		isAppearEmptyView()
 	}
@@ -101,14 +103,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 //			if let data: [String] = UserDefaults.standard[.searchHistory] {
 //				cell.searchLabel.text = data[indexPath.row-1]
 //				cell.deleteButton.tag = indexPath.row
-//				cell.deleteButton.addTarget(self, action: #selector(deleteSearchHistory(sender:)), for: .touchUpInside)
+			//				cell.deleteButton.addTarget(self, action: #selector(deleteSearchHistory(sender:)), for: .touchUpInside)
 
 			let cell = CodeSearchHistroyTableViewCell()
 			cell.deleteButton.addTarget(self, action: #selector(deleteSearchHistory(sender:)), for: .touchUpInside)
 			cell.deleteButton.tag = indexPath.row
-			if let data: [String] = UserDefaults.standard[.searchHistory] {
-				cell.searchLabel.text = data[indexPath.row-1]
-			}
+			let data: [String] = UserDefaults.standard[.searchHistory]
+			cell.searchLabel.text = data[indexPath.row-1]
 			return cell
 		}
 
@@ -127,13 +128,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 	}
 
 	func isAppearEmptyView() {
-		if let list: [String] = UserDefaults.standard[.searchHistory] {
-			if list.count != 0 {
-				emptyImage.removeFromSuperview()
-				emptyLabel.removeFromSuperview()
-				return
-			}
+		let list: [String] = UserDefaults.standard[.searchHistory]
+		if list.count != 0 {
+			emptyImage.removeFromSuperview()
+			emptyLabel.removeFromSuperview()
+			return
 		}
+
 		emptyImage.frame = CGRect(x: 0, y: 0, width: 300, height: 250)
 		emptyImage.center = view.center
 		view.addSubview(emptyImage)
@@ -147,8 +148,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension MainViewController: ConfigureProtocol {
 	func configureView() {
-		if let nickName: String = UserDefaults.standard[.userNickname] {
-			navigationItem.title = "\(nickName)님의 새싹쇼핑"
-		}
+		navigationItem.title = "\(UserDefaults.standard[.userNickname])님의 새싹쇼핑"
+
 	}
 }

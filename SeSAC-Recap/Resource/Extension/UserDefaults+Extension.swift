@@ -43,7 +43,7 @@ extension UserDefaults {
 
 	subscript(item: StringArrayUserDefaultsKeys) -> [String] {
 		get {
-			return UserDefaults.standard.array(forKey: item.rawValue)! as! [String]
+			return (UserDefaults.standard.array(forKey: item.rawValue) ?? []) as! [String]
 		} set {
 			UserDefaults.standard.setValue(newValue, forKey: item.rawValue)
 		}
