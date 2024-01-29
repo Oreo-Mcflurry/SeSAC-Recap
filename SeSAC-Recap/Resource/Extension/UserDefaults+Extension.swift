@@ -112,7 +112,5 @@ extension UserDefaults {
 		lists.insert(id,at:0)
 		UserDefaults.standard[.likeList] = lists
 		return
-
-		UserDefaults.standard[.likeList] = ["\(id)"]
 	}
 }
