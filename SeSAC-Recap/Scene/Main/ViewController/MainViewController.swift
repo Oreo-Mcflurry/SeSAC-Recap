@@ -30,6 +30,7 @@ class MainViewController: UIViewController {
 		alamofireManger.clearAlamofireCache()
 		KingfisherManager.shared.cache.clearMemoryCache()
 	}
+	
 }
 
 extension MainViewController: UISearchBarDelegate {
@@ -37,8 +38,12 @@ extension MainViewController: UISearchBarDelegate {
 		if var searchHistory: [String] = UserDefaults.standard[.searchHistory] {
 			if !searchHistory.contains(searchBar.text!) {
 				searchHistory.insert(searchBar.text!, at: 0)
+				UserDefaults.standard[.searchHistory] = searchHistory
+			} else {
+			  var newHistory = searchHistory.filter( { $0 != searchBar.text! } )
+				newHistory.insert(searchBar.text!, at: 0)
+				UserDefaults.standard[.searchHistory] = newHistory
 			}
-			UserDefaults.standard[.searchHistory] = searchHistory
 		} else {
 			UserDefaults.standard[.searchHistory] = ["\(searchBar.text!)"]
 		}
@@ -92,11 +97,17 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 			cell.deleteAllButton.addTarget(self, action: #selector(resetSearchHistory), for: .touchUpInside)
 			return cell
 		} else {
-			let cell = tableView.dequeueReusableCell(withIdentifier: SearchHistroyTableViewCell.identifier, for: indexPath) as! SearchHistroyTableViewCell
+//			let cell = tableView.dequeueReusableCell(withIdentifier: SearchHistroyTableViewCell.identifier, for: indexPath) as! SearchHistroyTableViewCell
+//			if let data: [String] = UserDefaults.standard[.searchHistory] {
+//				cell.searchLabel.text = data[indexPath.row-1]
+//				cell.deleteButton.tag = indexPath.row
+//				cell.deleteButton.addTarget(self, action: #selector(deleteSearchHistory(sender:)), for: .touchUpInside)
+
+			let cell = CodeSearchHistroyTableViewCell()
+			cell.deleteButton.addTarget(self, action: #selector(deleteSearchHistory(sender:)), for: .touchUpInside)
+			cell.deleteButton.tag = indexPath.row
 			if let data: [String] = UserDefaults.standard[.searchHistory] {
 				cell.searchLabel.text = data[indexPath.row-1]
-				cell.deleteButton.tag = indexPath.row
-				cell.deleteButton.addTarget(self, action: #selector(deleteSearchHistory(sender:)), for: .touchUpInside)
 			}
 			return cell
 		}
@@ -117,7 +128,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
 	func isAppearEmptyView() {
 		if let list: [String] = UserDefaults.standard[.searchHistory] {
-			print(list.count)
 			if list.count != 0 {
 				emptyImage.removeFromSuperview()
 				emptyLabel.removeFromSuperview()

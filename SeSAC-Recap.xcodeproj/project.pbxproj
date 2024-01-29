@@ -57,6 +57,9 @@
 		0BCF81C42B596AA0001F4E57 /* SetProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF81C32B596AA0001F4E57 /* SetProfileViewController.swift */; };
 		0BCF81CE2B597030001F4E57 /* SelectProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF81CC2B597030001F4E57 /* SelectProfileCollectionViewCell.swift */; };
 		0BCF81CF2B597030001F4E57 /* SelectProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BCF81CD2B597030001F4E57 /* SelectProfileCollectionViewCell.xib */; };
+		0BD1A7AD2B67CC5200A750B1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0BD1A7AC2B67CC5200A750B1 /* SnapKit */; };
+		0BD1A7AF2B67CC5200A750B1 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0BD1A7AE2B67CC5200A750B1 /* SnapKit-Dynamic */; };
+		0BD1A7B12B67D3F200A750B1 /* CodebaseConfigureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1A7B02B67D3F200A750B1 /* CodebaseConfigureProtocol.swift */; };
 		0BFC1D0E2B5971DA00C30162 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFC1D0C2B5971DA00C30162 /* ProfileCollectionViewCell.swift */; };
 		0BFC1D0F2B5971DA00C30162 /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFC1D0D2B5971DA00C30162 /* ProfileCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -111,6 +114,7 @@
 		0BCF81C32B596AA0001F4E57 /* SetProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetProfileViewController.swift; sourceTree = "<group>"; };
 		0BCF81CC2B597030001F4E57 /* SelectProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		0BCF81CD2B597030001F4E57 /* SelectProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectProfileCollectionViewCell.xib; sourceTree = "<group>"; };
+		0BD1A7B02B67D3F200A750B1 /* CodebaseConfigureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodebaseConfigureProtocol.swift; sourceTree = "<group>"; };
 		0BFC1D0C2B5971DA00C30162 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		0BFC1D0D2B5971DA00C30162 /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,7 +124,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BD1A7AF2B67CC5200A750B1 /* SnapKit-Dynamic in Frameworks */,
 				0B6F63902B5A26B900592F50 /* TextFieldEffects in Frameworks */,
+				0BD1A7AD2B67CC5200A750B1 /* SnapKit in Frameworks */,
 				0B6F638A2B5A26A000592F50 /* Kingfisher in Frameworks */,
 				0B6F638D2B5A26A800592F50 /* Alamofire in Frameworks */,
 			);
@@ -423,6 +429,7 @@
 			children = (
 				0BCF81AD2B5949AA001F4E57 /* ReuseableProtocol.swift */,
 				0BCF81B32B595732001F4E57 /* ConfigureProtocol.swift */,
+				0BD1A7B02B67D3F200A750B1 /* CodebaseConfigureProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -510,6 +517,8 @@
 				0B6F63892B5A26A000592F50 /* Kingfisher */,
 				0B6F638C2B5A26A800592F50 /* Alamofire */,
 				0B6F638F2B5A26B900592F50 /* TextFieldEffects */,
+				0BD1A7AC2B67CC5200A750B1 /* SnapKit */,
+				0BD1A7AE2B67CC5200A750B1 /* SnapKit-Dynamic */,
 			);
 			productName = "SeSAC-Recap";
 			productReference = 0BCF818A2B594875001F4E57 /* SeSAC-Recap.app */;
@@ -543,6 +552,7 @@
 				0B6F63882B5A26A000592F50 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				0B6F638B2B5A26A800592F50 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				0B6F638E2B5A26B900592F50 /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
+				0BD1A7AB2B67CC5200A750B1 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 0BCF818B2B594875001F4E57 /* Products */;
 			projectDirPath = "";
@@ -588,6 +598,7 @@
 				0BCF81B02B5949C2001F4E57 /* Identifier+Extension.swift in Sources */,
 				0B6F63CB2B5D04F900592F50 /* WebViewController.swift in Sources */,
 				0BCF81C42B596AA0001F4E57 /* SetProfileViewController.swift in Sources */,
+				0BD1A7B12B67D3F200A750B1 /* CodebaseConfigureProtocol.swift in Sources */,
 				0B6F640B2B5F426900592F50 /* PublicAPIKeys.swift in Sources */,
 				0B6F63B32B5BDAAD00592F50 /* SearchResultViewController.swift in Sources */,
 				0BCF81AE2B5949AA001F4E57 /* ReuseableProtocol.swift in Sources */,
@@ -869,6 +880,14 @@
 				minimumVersion = 1.7.0;
 			};
 		};
+		0BD1A7AB2B67CC5200A750B1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -886,6 +905,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0B6F638E2B5A26B900592F50 /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
 			productName = TextFieldEffects;
+		};
+		0BD1A7AC2B67CC5200A750B1 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0BD1A7AB2B67CC5200A750B1 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		0BD1A7AE2B67CC5200A750B1 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0BD1A7AB2B67CC5200A750B1 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

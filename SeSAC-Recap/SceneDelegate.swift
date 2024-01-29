@@ -26,6 +26,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 			let vc = sb.instantiateViewController(identifier: "tabView") as! TabViewController
 			window?.rootViewController = vc
 			window?.makeKeyAndVisible()
+
+			let content = UNMutableNotificationContent()
+			content.title = "하핫 노티는 즐거워"
+			content.body = "코딩은 즐거워 ?? \"아닌듯함\""
+			content.badge = 20
+
+			let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+
+			let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+
+			UNUserNotificationCenter.current().add(request)
 		}
 
 	}
