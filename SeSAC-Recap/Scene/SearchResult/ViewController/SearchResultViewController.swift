@@ -143,25 +143,63 @@ extension SearchResultViewController {
 
 	func callSearchResult(_ searhText: String, _ sort: SearchSortKind, withStart start: String) {
 		let url = "https://openapi.naver.com/v1/search/shop.json?query=\(searchText)&display=30&start=\(start)&sort=\(sort.rawValue)"
-		let header: HTTPHeaders = [
+		let header = [
 			"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
 			"X-Naver-Client-Id": APIKeys.naverClient.rawValue,
 			"X-Naver-Client-Secret": APIKeys.naverClientSecret.rawValue,
 		]
 
-		AF.request(url, headers: header).responseDecodable(of: NaverShopping.self) { response in
-			switch response.result {
-			case .success(let success):
-				if self.page == 0 {
-					self.items = success.items
-					self.resultCountLabel.text = success.getTotalCount
-				} else {
-					self.items.append(contentsOf: success.items)
-				}
-				self.collectionView.reloadData()
-			case .failure(_):
+//		AF.request(url, headers: header).responseDecodable(of: NaverShopping.self) { response in
+//			switch response.result {
+//			case .success(let success):
+//				if self.page == 0 {
+//					self.items = success.items
+//					self.resultCountLabel.text = success.getTotalCount
+//				} else {
+//					self.items.append(contentsOf: success.items)
+//				}
+//				self.collectionView.reloadData()
+//			case .failure(_):
+//				self.resultCountLabel.text = "통신을 실패했습니다."
+//			}
+//		}
+
+		var request = URLRequest(url: URL(string: url)!)
+		request.allHTTPHeaderFields = header
+		URLSession.shared.dataTask(with: request) { data, response, error in
+			if let error {
 				self.resultCountLabel.text = "통신을 실패했습니다."
+				return
 			}
-		}
+
+			guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
+				self.resultCountLabel.text = "응답코드가 잘못되었습니다."
+				return
+			}
+
+			guard let data else {
+				self.resultCountLabel.text = "데이터의 형식이 잘못되었습니다."
+				return
+			}
+
+			do {
+				let result = try JSONDecoder().decode(NaverShopping.self, from: data)
+				DispatchQueue.main.async {
+					if self.page == 0 {
+						self.items = result.items
+						self.resultCountLabel.text = result.getTotalCount
+					} else {
+						self.items.append(contentsOf: result.items)
+					}
+					self.collectionView.reloadData()
+				}
+
+			} catch {
+				self.resultCountLabel.text = "데이터 변환을 실패하였습니다."
+			}
+
+
+		}.resume()
+
 	}
 }

@@ -3,4 +3,54 @@
    uuid = "CA158289-7E15-4812-BBF3-890A44428367"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9B77C72C-2A67-46A9-B000-7058F65B32D4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeSAC-Recap/Scene/SearchResult/ViewController/SearchResultViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "callSearchResult(_:_:withStart:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9B77C72C-2A67-46A9-B000-7058F65B32D4 - 335d1431951fba82"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSAC_Recap.SearchResultViewController.callSearchResult(_: Swift.String, _: SeSAC_Recap.SearchResultViewController.SearchSortKind, withStart: Swift.String) -&gt; ()"
+                  moduleName = "SeSAC-Recap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a_mcflurry/Documents/Xcode/SeSAC-iOS/ignore/SeSAC-Recap/SeSAC-Recap/Scene/SearchResult/ViewController/SearchResultViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
+                  offsetFromSymbolStart = "1616">
+               </Location>
+               <Location
+                  uuid = "9B77C72C-2A67-46A9-B000-7058F65B32D4 - c98906cb29266175"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SeSAC_Recap.SearchResultViewController.callSearchResult(_: Swift.String, _: SeSAC_Recap.SearchResultViewController.SearchSortKind, withStart: Swift.String) -&gt; ()"
+                  moduleName = "SeSAC-Recap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a_mcflurry/Documents/Xcode/SeSAC-iOS/ignore/SeSAC-Recap/SeSAC-Recap/Scene/SearchResult/ViewController/SearchResultViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "170"
+                  endingLineNumber = "170"
+                  offsetFromSymbolStart = "256">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
